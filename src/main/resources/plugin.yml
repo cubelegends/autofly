@@ -1,0 +1,6 @@
+name: AutoFly
+version: 1.0.0-SNAPSHOT
+escription: AutoFly v1.0.0-SNAPSHOT
+authors: [ henningrck ]
+website: https://github.com/cubelegends/autofly
+main: de.cubelegends.autofly.AutoFly
