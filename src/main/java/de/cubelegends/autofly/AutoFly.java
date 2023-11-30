@@ -9,6 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerGameModeChangeEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class AutoFly extends JavaPlugin implements Listener {
@@ -38,6 +39,11 @@ public class AutoFly extends JavaPlugin implements Listener {
         Bukkit.getScheduler().runTaskLater(this, () -> {
             autoEnableFly(event.getNewGameMode(), event.getPlayer());
         }, DELAY_TICKS);
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onPlayerRespawn(PlayerRespawnEvent event) {
+        autoEnableFly(event.getPlayer().getGameMode(), event.getPlayer());
     }
 
     private void autoEnableFly(GameMode gameMode, Player player) {
