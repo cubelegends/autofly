@@ -1,6 +1,6 @@
 name: AutoFly
-version: 0.1.0
-description: AutoFly v0.1.0
+version: 0.1.1-SNAPSHOT
+description: AutoFly v0.1.1-SNAPSHOT
 author: henningstorck
 main: com.henningstorck.autofly.AutoFly
 depend: [ WorldGuard ]
